@@ -1,1 +1,32 @@
-<mat-card><p>address-book works!</p></mat-card>
+<mat-card>
+  <mat-card-title class="text-center">Edit/Add Address</mat-card-title>
+  <form [formGroup]="addressFormGroup" (ngSubmit)="createNewAddress()" class="address-form-wrapper">
+    <mat-card-content class="d-flex flex-column">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Full Name" formControlName="name" id="name">
+        <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Zip Code" formControlName="zipCode" id="zipCode">
+        <mat-error *ngIf="hasError('zipCode', 'required')">Zip Code is required</mat-error>
+        <mat-error *ngIf="hasError('zipCode', 'maxLength')">Should only be 5 characters</mat-error>
+        <mat-error *ngIf="hasError('zipCode', 'pattern')">Incorrect formatting</mat-error>
+      </mat-form-field>
+
+     <mat-form-field>
+       <mat-label>Select Country</mat-label>
+       <mat-select formControlName="country">
+         <mat-option *ngFor="let country of countries" [value]="country">
+           {{country.country}}
+         </mat-option>
+       </mat-select>
+       <mat-error *ngIf="hasError('country', 'required')">Country is required</mat-error>
+     </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" type="submit">Enter</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
