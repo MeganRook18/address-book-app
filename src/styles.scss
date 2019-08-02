@@ -1,10 +1,10 @@
 @import "styles/bootstrap_loader";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-// we use the icons from Material+Icons font
+// icons from Material+Icons font
 @import url("//fonts.googleapis.com/icon?family=Material+Icons");
 
-// Lato family font
-@import url("//fonts.googleapis.com/css?family=Lato");
+@import "styles/common";
 
 html,
 body {

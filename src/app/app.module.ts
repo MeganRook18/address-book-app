@@ -6,15 +6,18 @@ import { AppComponent } from "./app.component";
 import { AddressBookComponent } from "./address-book/address-book.component";
 import { EditAddressComponent } from "./edit-address/edit-address.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {MatCardModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatInputModule, MatButtonModule} from "@angular/material";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {
+  MatCardModule,
+  MatFormFieldModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatInputModule,
+  MatButtonModule, MatTableModule, MatIconModule
+} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddressBookComponent,
-    EditAddressComponent
-  ],
+  declarations: [AppComponent, AddressBookComponent, EditAddressComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,8 +30,10 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ReactiveFormsModule,
     FormsModule,
     MatButtonModule,
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

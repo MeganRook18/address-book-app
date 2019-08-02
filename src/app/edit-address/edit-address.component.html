@@ -1,1 +1,31 @@
-<mat-card> </mat-card>
+<mat-card class="mat-card-wrapper">
+  <mat-card-title class="text-center">Address Book</mat-card-title>
+  <mat-card-content class="container">
+    <table class="table table-trapped">
+      <thead>
+        <tr>
+          <th scope="col" i18n="name">Name</th>
+          <th scope="col" i18n="ZipCode">ZipCode</th>
+          <th scope="col" i18n="Country">Country</th>
+          <th scope="col" i18n="Edit">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let address of this.service.addressBookObserver | async">
+          <td>{{ address.name }}</td>
+          <td>{{ address.zipCode }}</td>
+          <td>{{ address.country }}</td>
+          <td>
+            <button class="edit-icon" mat-icon-button title="Edit">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
+<!--- TODO: needs to be span wrapped around a form. that shows with clicking edit button
+            then will need to find the object and pre-fillout.
+            - once edited delete old and push? or update object some how.
+-->
