@@ -44,11 +44,13 @@ export class AddressBookComponent implements OnInit {
 
   private formToObj() {
     const countryObj = this.addressFormGroup.get("country").value;
+
     const address: Address = {
       name: this.addressFormGroup.get("name").value,
       zipCode: this.addressFormGroup.get("zipCode").value,
       country: countryObj.country
     };
+
     return address;
   }
 }

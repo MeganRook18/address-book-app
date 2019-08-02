@@ -15,9 +15,10 @@ import {
   MatButtonModule, MatTableModule, MatIconModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AddressFormComponent } from './address-form/address-form.component';
 
 @NgModule({
-  declarations: [AppComponent, AddressBookComponent, EditAddressComponent],
+  declarations: [AppComponent, AddressBookComponent, EditAddressComponent, AddressFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

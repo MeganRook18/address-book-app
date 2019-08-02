@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import {BehaviorSubject, Observable} from 'rxjs';
+import { BehaviorSubject } from "rxjs";
 
 declare var require: any;
 
@@ -21,17 +21,17 @@ export class AddressBookServiceService {
     {
       name: "Megan Rook",
       zipCode: "ABC12",
-      country: "UK"
+      country: "Albania"
     },
     {
       name: "Sammy",
       zipCode: "ABC12",
-      country: "Australia"
+      country: "Antarctica"
     },
     {
       name: "Russel",
       zipCode: "ABC12",
-      country: "New Zealand"
+      country: "Belgium"
     }
   ];
   public addressBookObserver = new BehaviorSubject(this.addressBook);
@@ -40,11 +40,17 @@ export class AddressBookServiceService {
     return require("../assets/data/countries.json");
   }
 
+  public getAddressBook() {
+    return this.addressBook;
+  }
+
   public addAddressBook(address) {
     this.addressBook.push(address);
   }
 
-  public getAddress(): Observable<Address[]> {
-    return this.addressBookObserver;
+  public editAddress(orAddress, editedAddress) {
+    const updateAddress = this.addressBook.find(a => a === orAddress);
+    const index = this.addressBook.indexOf(updateAddress);
+    this.addressBook[index] = editedAddress;
   }
 }

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="99040b90033bb57e37c55c0fba14abbb8b87bc4b" datatype="html">
+        <source>Add New Address</source>
+        <target>Ajouter une nouvelle adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b752f143ab30faa45a2679b5e7a28bbf3fb246d" datatype="html">
+        <source>Name is required</source>
+        <target>Le nom est requis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-form/address-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="01a85c2e9621ba6e10c88d1ab59fdd8145d75ed9" datatype="html">
+        <source>Zip Code is required</source>
+        <target>Code postal requis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-form/address-form.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d36124acbdd0321179605ae1833d5c2eba06a638" datatype="html">
+        <source>Should only be 5 characters</source>
+        <target>Ne devrait être que 5 caractères</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-form/address-form.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf699421d2cc77b18b9ee2c632528af0f605d7fc" datatype="html">
+        <source>Incorrect formatting</source>
+        <target>Formatage incorrect</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-form/address-form.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="61c6b487330ed1cf183b79eecbfa81a2f447700f" datatype="html">
+        <source>Country is required</source>
+         <target>Le pays est requis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-form/address-form.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="001259df70882a32c734f9a15c04ded19de835cc" datatype="html">
+        <source>ADD</source>
+        <target>Ajouter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-book/address-book.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4ec6b711a629b9e4ef50f5c1842e127c68f1c926" datatype="html">
+        <source>Address Book</source>
+        <target>Carnet d'adresses</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-address/edit-address.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <target>prénom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-address/edit-address.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c63af2d25e99420ee83b1aa82e4653a651d53bb9" datatype="html">
+        <source>ZipCode</source>
+        <target>Code postal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-address/edit-address.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a43f25a9ac40e8e2441ff0be7a36b8e5d15534df" datatype="html">
+        <source>Country</source>
+        <target>pays</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-address/edit-address.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
+        <source>Edit</source>
+        <target>Modifier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-address/edit-address.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-address/edit-address.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/address-form/address-form.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

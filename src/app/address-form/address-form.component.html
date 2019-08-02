@@ -1,0 +1,48 @@
+<form [formGroup]="editAddressFormGroup" (ngSubmit)="editAddress()">
+  <mat-card-content class="d-flex flex-column">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Full Name"
+        formControlName="name"
+      />
+      <mat-error *ngIf="hasError('name', 'required')"
+        i18n>Name is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Zip Code"
+        formControlName="zipCode"
+      />
+      <mat-error *ngIf="hasError('zipCode', 'required')"
+        i18n>Zip Code is required</mat-error
+      >
+      <mat-error *ngIf="hasError('zipCode', 'maxLength')"
+        i18n>Should only be 5 characters</mat-error
+      >
+      <mat-error *ngIf="hasError('zipCode', 'pattern')"
+        i18n>Incorrect formatting</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Select Country</mat-label>
+      <mat-select formControlName="country">
+        <mat-option *ngFor="let country of countries" [value]="country.country">
+          {{ country.country }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="hasError('country', 'required')"
+        i18n>Country is required</mat-error
+      >
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button i18n mat-raised-button color="primary" type="submit">Edit</button>
+  </mat-card-actions>
+</form>

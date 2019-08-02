@@ -1,16 +1,28 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {MatCardModule, MatError, MatLabel} from '@angular/material';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserModule} from "@angular/platform-browser";
 
-import { AddressBookComponent } from './address-book.component';
+import { AddressBookComponent } from "./address-book.component";
+import { AddressBookServiceService } from "../address-book-service.service";
 
-describe('AddressBookComponent', () => {
+fdescribe("AddressBookComponent", () => {
   let component: AddressBookComponent;
   let fixture: ComponentFixture<AddressBookComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddressBookComponent ]
-    })
-    .compileComponents();
+      declarations: [AddressBookComponent],
+      imports: [
+        MatCardModule,
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule
+      ],
+      providers: [AddressBookServiceService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +31,7 @@ describe('AddressBookComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

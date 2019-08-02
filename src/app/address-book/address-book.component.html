@@ -1,5 +1,5 @@
 <mat-card class="mat-card-wrapper">
-  <mat-card-title class="text-center">Edit/Add Address</mat-card-title>
+  <mat-card-title class="text-center" i18n>Add New Address</mat-card-title>
   <form
     [formGroup]="addressFormGroup"
     (ngSubmit)="createNewAddress()"
@@ -15,7 +15,7 @@
           id="name"
         />
         <mat-error *ngIf="hasError('name', 'required')"
-          >Name is required</mat-error
+          i18n>Name is required</mat-error
         >
       </mat-form-field>
 
@@ -28,13 +28,13 @@
           id="zipCode"
         />
         <mat-error *ngIf="hasError('zipCode', 'required')"
-          >Zip Code is required</mat-error
+          i18n>Zip Code is required</mat-error
         >
         <mat-error *ngIf="hasError('zipCode', 'maxLength')"
-          >Should only be 5 characters</mat-error
+          i18n>Should only be 5 characters</mat-error
         >
         <mat-error *ngIf="hasError('zipCode', 'pattern')"
-          >Incorrect formatting</mat-error
+          i18n>Incorrect formatting</mat-error
         >
       </mat-form-field>
 
@@ -46,7 +46,7 @@
           </mat-option>
         </mat-select>
         <mat-error *ngIf="hasError('country', 'required')"
-          >Country is required</mat-error
+          i18n>Country is required</mat-error
         >
       </mat-form-field>
     </mat-card-content>
