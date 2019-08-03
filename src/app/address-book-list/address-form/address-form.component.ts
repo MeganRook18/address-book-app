@@ -5,7 +5,7 @@ import {
   Address,
   AddressBookServiceService,
   Countries
-} from "../address-book-service.service";
+} from "../../address-book-service/address-book-service.service";
 
 @Component({
   selector: "app-address-form",
@@ -38,6 +38,10 @@ export class AddressFormComponent implements OnInit {
     if (this.editAddressFormGroup.valid) {
       this._service.editAddress(this.address, this.formToObj());
     }
+  }
+
+  public deleteContact() {
+    this._service.deleteAddress(this.address);
   }
 
   public hasError(controlName: string, errorName: string) {

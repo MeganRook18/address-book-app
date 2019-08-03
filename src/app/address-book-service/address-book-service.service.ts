@@ -29,7 +29,7 @@ export class AddressBookServiceService {
       country: "Antarctica"
     },
     {
-      name: "Russel",
+      name: "Apple",
       zipCode: "ABC12",
       country: "Belgium"
     }
@@ -37,7 +37,7 @@ export class AddressBookServiceService {
   public addressBookObserver = new BehaviorSubject(this.addressBook);
 
   public static getCountries() {
-    return require("../assets/data/countries.json");
+    return require("../../assets/data/countries.json");
   }
 
   public getAddressBook() {
@@ -48,9 +48,18 @@ export class AddressBookServiceService {
     this.addressBook.push(address);
   }
 
-  public editAddress(orAddress, editedAddress) {
-    const updateAddress = this.addressBook.find(a => a === orAddress);
-    const index = this.addressBook.indexOf(updateAddress);
-    this.addressBook[index] = editedAddress;
+  public deleteAddress(address) {
+    this.addressBook.splice(this.findAddressInBookAndReturnIndex(address), 1);
+  }
+
+  public editAddress(originalAddress, editedAddress) {
+    this.addressBook[
+      this.findAddressInBookAndReturnIndex(originalAddress)
+    ] = editedAddress;
+  }
+
+  private findAddressInBookAndReturnIndex(addressToBeLocated) {
+    const updateAddress = this.addressBook.find(a => a === addressToBeLocated);
+    return this.addressBook.indexOf(updateAddress);
   }
 }

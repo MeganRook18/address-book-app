@@ -1,0 +1,46 @@
+<mat-card class="mat-card-wrapper container">
+  <mat-card-title class="text-center" i18n>Address Book</mat-card-title>
+  <mat-card-content>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" i18n>Name</th>
+          <th scope="col" i18n>ZipCode</th>
+          <th scope="col" i18n>Country</th>
+          <th scope="col" i18n>Edit</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let address of this.service.addressBookObserver | async" @fade>
+        <tr>
+          <td>{{ address.name }}</td>
+          <td>{{ address.zipCode }}</td>
+          <td>{{ address.country }}</td>
+          <td>
+            <button
+              class="edit-icon"
+              mat-icon-button
+              i18n-title
+              title="Edit"
+              aria-label="Edit Address"
+              (click)="
+                expandedElement = expandedElement === address ? null : address
+              "
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            [@detailExpand]="
+              address == expandedElement ? 'expanded' : 'collapsed'
+            "
+            colspan="3"
+          >
+            <app-address-form [address]="address"></app-address-form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>

@@ -5,7 +5,7 @@ import {
   Address,
   AddressBookServiceService,
   Countries
-} from "../address-book-service.service";
+} from "../address-book-service/address-book-service.service";
 
 @Component({
   selector: "app-address-book",
@@ -19,7 +19,7 @@ export class AddressBookComponent implements OnInit {
     zipCode: new FormControl("", [
       Validators.required,
       Validators.maxLength(5),
-      Validators.pattern("ABC12")
+      Validators.pattern("[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z0-9][a-zA-Z0-9]")
     ]),
     country: new FormControl("", [Validators.required])
   });
@@ -31,7 +31,6 @@ export class AddressBookComponent implements OnInit {
     this.countries = AddressBookServiceService.getCountries();
   }
 
-  // TODO:use local storage?
   public createNewAddress() {
     if (this.addressFormGroup.valid) {
       this._service.addAddressBook(this.formToObj());

@@ -1,13 +1,13 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import {MatCardModule, MatError, MatLabel} from '@angular/material';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
 
 import { AddressBookComponent } from "./address-book.component";
-import { AddressBookServiceService } from "../address-book-service.service";
+import { AddressBookServiceService } from "../address-book-service/address-book-service.service";
+import {MaterialModule} from "../shared/material.module";
 
-fdescribe("AddressBookComponent", () => {
+describe("AddressBookComponent", () => {
   let component: AddressBookComponent;
   let fixture: ComponentFixture<AddressBookComponent>;
 
@@ -15,7 +15,7 @@ fdescribe("AddressBookComponent", () => {
     TestBed.configureTestingModule({
       declarations: [AddressBookComponent],
       imports: [
-        MatCardModule,
+        MaterialModule,
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,

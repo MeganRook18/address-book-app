@@ -1,35 +1,34 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { TestBed, async } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
-describe('AppComponent', () => {
+import {AddressBookComponent} from "./address-book/address-book.component";
+import {AddressBookListComponent} from "./address-book-list/address-book-list.component";
+import {MaterialModule} from "./shared/material.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AddressFormComponent} from "./address-book-list/address-form/address-form.component";
+
+describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule,
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        AddressBookComponent,
+        AddressBookListComponent,
+        AddressFormComponent
       ],
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'coople-address-book'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('coople-address-book');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to coople-address-book!');
   });
 });
