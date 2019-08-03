@@ -17,8 +17,8 @@
           aria-label="Enter name"
         />
 
-        <mat-error *ngIf="hasError('name', 'required')"
-          i18n>Name is required</mat-error
+        <mat-error *ngIf="hasError('name', 'required')" i18n
+          >Name is required</mat-error
         >
       </mat-form-field>
 
@@ -33,14 +33,14 @@
           aria-label="Enter zip code"
         />
 
-        <mat-error *ngIf="hasError('zipCode', 'required')"
-          i18n>Zip Code is required</mat-error
+        <mat-error *ngIf="hasError('zipCode', 'required')" i18n
+          >Zip Code is required</mat-error
         >
-        <mat-error *ngIf="hasError('zipCode', 'maxLength')"
-          i18n>Should only be 5 characters</mat-error
+        <mat-error *ngIf="hasError('zipCode', 'maxLength')" i18n
+          >Should only be 5 characters</mat-error
         >
-        <mat-error *ngIf="hasError('zipCode', 'pattern')"
-          i18n>Incorrect formatting</mat-error
+        <mat-error *ngIf="hasError('zipCode', 'pattern')" i18n
+          >Incorrect formatting</mat-error
         >
       </mat-form-field>
 
@@ -51,13 +51,22 @@
             {{ country.country }}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="hasError('country', 'required')"
-          i18n>Country is required</mat-error
+        <mat-error *ngIf="hasError('country', 'required')" i18n
+          >Country is required</mat-error
         >
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
-      <button i18n mat-raised-button color="primary" type="submit" aria-label="Add new contact">DONE</button>
+      <button
+        i18n
+        mat-raised-button
+        color="primary"
+        type="submit"
+        aria-label="Add new contact"
+        class="done-btn"
+      >
+        DONE
+      </button>
     </mat-card-actions>
   </form>
 </mat-card>

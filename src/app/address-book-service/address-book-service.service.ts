@@ -1,17 +1,9 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 
+import {Address} from "../shared/types.module";
+
 declare var require: any;
-
-export interface Countries {
-  country: string;
-}
-
-export interface Address {
-  name: string;
-  zipCode: string;
-  country: string;
-}
 
 @Injectable({
   providedIn: "root"

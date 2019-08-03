@@ -1,11 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
-import {
-  Address,
-  AddressBookServiceService,
-  Countries
-} from "../address-book-service/address-book-service.service";
+import { AddressBookServiceService } from "../address-book-service/address-book-service.service";
+import { Address, Countries } from "../shared/types.module";
 
 @Component({
   selector: "app-address-book",
@@ -23,7 +20,6 @@ export class AddressBookComponent implements OnInit {
     ]),
     country: new FormControl("", [Validators.required])
   });
-
   // tslint:disable-next-line:variable-name
   constructor(private _service: AddressBookServiceService) {}
 

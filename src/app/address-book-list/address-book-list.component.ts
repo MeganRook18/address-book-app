@@ -8,9 +8,9 @@ import {
 } from "@angular/animations";
 
 import {
-  Address,
   AddressBookServiceService
 } from "../address-book-service/address-book-service.service";
+import {Address} from "../shared/types.module";
 
 @Component({
   selector: "app-address-book-list",

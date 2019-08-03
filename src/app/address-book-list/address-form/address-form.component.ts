@@ -2,10 +2,9 @@ import { Component, Input, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 import {
-  Address,
   AddressBookServiceService,
-  Countries
 } from "../../address-book-service/address-book-service.service";
+import {Address, Countries} from "../../shared/types.module";
 
 @Component({
   selector: "app-address-form",
@@ -21,7 +20,7 @@ export class AddressFormComponent implements OnInit {
     zipCode: new FormControl("", [
       Validators.required,
       Validators.maxLength(5),
-      Validators.pattern("ABC12")
+      Validators.pattern("[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z0-9][a-zA-Z0-9]")
     ]),
     country: new FormControl("", [Validators.required])
   });

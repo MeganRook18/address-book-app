@@ -10,36 +10,43 @@
           <th scope="col" i18n>Edit</th>
         </tr>
       </thead>
-      <tbody *ngFor="let address of this.service.addressBookObserver | async" @fade>
-        <tr>
-          <td>{{ address.name }}</td>
-          <td>{{ address.zipCode }}</td>
-          <td>{{ address.country }}</td>
-          <td>
-            <button
-              class="edit-icon"
-              mat-icon-button
-              i18n-title
-              title="Edit"
-              aria-label="Edit Address"
-              (click)="
-                expandedElement = expandedElement === address ? null : address
+      <tbody
+        *ngFor="let address of this.service.addressBookObserver | async"
+        @fade
+      >
+        <ng-container>
+          <tr>
+            <td>{{ address.name }}</td>
+            <td>{{ address.zipCode }}</td>
+            <td>{{ address.country }}</td>
+            <td>
+              <button
+                class="edit-icon"
+                mat-icon-button
+                i18n-title
+                title="Edit"
+                aria-label="Edit Address"
+                (click)="
+                  expandedElement = expandedElement === address ? null : address
+                "
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </ng-container>
+        <ng-container>
+          <tr>
+            <td
+              [@detailExpand]="
+                address == expandedElement ? 'expanded' : 'collapsed'
               "
+              colspan="3"
             >
-              <mat-icon>edit</mat-icon>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td
-            [@detailExpand]="
-              address == expandedElement ? 'expanded' : 'collapsed'
-            "
-            colspan="3"
-          >
-            <app-address-form [address]="address"></app-address-form>
-          </td>
-        </tr>
+              <app-address-form [address]="address"></app-address-form>
+            </td>
+          </tr>
+        </ng-container>
       </tbody>
     </table>
   </mat-card-content>
